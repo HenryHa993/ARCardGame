@@ -35,6 +35,6 @@ MonoBehaviour:
   - Assets/AR Template/UnityXRContent/ARFoundation/SimulationEnvironments/Office/Office_36ftx16.5ft_001.prefab
   - Assets/AR Template/UnityXRContent/ARFoundation/SimulationEnvironments/Office/Office_36ftx16.5ft_002.prefab
   - Assets/AR Template/UnityXRContent/ARFoundation/SimulationEnvironments/Park/Park_322ftx300ft.prefab
-  - Assets/Prefabs/TestingEnvironment.prefab
+  - Assets/Prefabs/Prototyping/TestingEnvironment.prefab
   - Packages/com.unity.xr.arfoundation/Assets/Prefabs/DefaultSimulationEnvironment.prefab
   m_FallbackAtEndOfList: 1
