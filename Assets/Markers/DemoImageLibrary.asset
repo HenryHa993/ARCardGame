@@ -1,0 +1,69 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 848409ee8ba454f42a5ddff137688a27, type: 3}
+  m_Name: DemoImageLibrary
+  m_EditorClassIdentifier: 
+  m_GuidLow: 5536948486026410898
+  m_GuidHigh: 13291929261787463308
+  m_DataStore:
+    m_Storage: []
+  m_Images:
+  - m_SerializedGuid:
+      m_GuidLow: 5542521381151827276
+      m_GuidHigh: 7858535013880724375
+    m_SerializedTextureGuid:
+      m_GuidLow: 9972104773717526172
+      m_GuidHigh: 1234846197798114794
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: Rock
+    m_Texture: {fileID: 2800000, guid: 0c69069c08758a64ea95ff0b130e2311, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 5374895701144890152
+      m_GuidHigh: 16066924451366951564
+    m_SerializedTextureGuid:
+      m_GuidLow: 11291776290037121399
+      m_GuidHigh: 5532336006386488536
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: Rock
+    m_Texture: {fileID: 2800000, guid: 9ad7417772b59cb4d814c54649cec64c, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 4820059154841309267
+      m_GuidHigh: 12190046187341474176
+    m_SerializedTextureGuid:
+      m_GuidLow: 16754651484989860742
+      m_GuidHigh: 79125594722758056
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: JohnLemon
+    m_Texture: {fileID: 2800000, guid: 724aab867ac1e884a86d17264f1c1901, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 5489865566536530898
+      m_GuidHigh: 8932523480845200801
+    m_SerializedTextureGuid:
+      m_GuidLow: 4239256030488997897
+      m_GuidHigh: 1554496634354791641
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: JohnLemon
+    m_Texture: {fileID: 2800000, guid: 313ab009dce63ad4d9f441ef73ae9215, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 5405850032412039514
+      m_GuidHigh: 2389709261152495783
+    m_SerializedTextureGuid:
+      m_GuidLow: 3090635242466438006
+      m_GuidHigh: 8926763002423661880
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: Board
+    m_Texture: {fileID: 2800000, guid: cd83eb7624602ae438d58f99a73be27b, type: 3}

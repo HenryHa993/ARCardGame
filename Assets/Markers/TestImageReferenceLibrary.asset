@@ -25,7 +25,7 @@ MonoBehaviour:
       m_GuidHigh: 5724591378300010745
     m_Size: {x: 0, y: 0}
     m_SpecifySize: 0
-    m_Name: Fusebox
+    m_Name: Fuse
     m_Texture: {fileID: 2800000, guid: 483682ee5d83f9b4f900d64387d5714f, type: 3}
   - m_SerializedGuid:
       m_GuidLow: 5756928101895721487
@@ -37,3 +37,13 @@ MonoBehaviour:
     m_SpecifySize: 0
     m_Name: JohnLemon
     m_Texture: {fileID: 2800000, guid: d41ee5a11717416418f52e183dae2fbe, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 4855012371462674050
+      m_GuidHigh: 3563270009967757953
+    m_SerializedTextureGuid:
+      m_GuidLow: 10224398458045277266
+      m_GuidHigh: 8698885567574740969
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: Board
+    m_Texture: {fileID: 2800000, guid: f5d724525c398de4e98f10c555a6b878, type: 3}
