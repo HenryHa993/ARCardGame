@@ -1,0 +1,34 @@
+{
+    "name": "BattleTestActions",
+    "maps": [
+        {
+            "name": "Player",
+            "id": "5f890a3d-3937-44b0-b775-0f365945c680",
+            "actions": [
+                {
+                    "name": "EndTurn",
+                    "type": "Button",
+                    "id": "aa583a80-8504-451e-8777-06c76a5181f7",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "6403bd1b-7b6b-4ea5-bbee-dab62552ba02",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "EndTurn",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

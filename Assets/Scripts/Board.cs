@@ -1,22 +1,45 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum BoardState
+{
+    BlueTurn,
+    RedTurn
+}
+
 public class Board : MonoBehaviour
 {
-    public BoardSide BlueSide;
-    public BoardSide RedSide;
-    
-    // Start is called before the first frame update
-    void Start()
+    public BoardSide ActionSide;
+    public BoardSide DefendSide;
+
+    public BoardState CurrentState;
+
+    private void Start()
     {
-        
+        CurrentState = BoardState.BlueTurn;
+        ActionSide.Arrow.enabled = true;
+        DefendSide.Arrow.enabled = false;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void OnEndTurn()
     {
+        if (ActionSide.BoardUnit == null || DefendSide.BoardUnit == null)
+        {
+            return;
+        }
         
+        Debug.Log(ActionSide.name + " attacks " + DefendSide.name);
+        TurnAction();
+        
+        (ActionSide, DefendSide) = (DefendSide, ActionSide);
+        ActionSide.Arrow.enabled = true;
+        DefendSide.Arrow.enabled = false;
     }
-    
+
+    public void TurnAction()
+    {
+        ActionSide.Attack(DefendSide);
+    }
 }
