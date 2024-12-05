@@ -907,6 +907,7 @@ MonoBehaviour:
   MaxHealth: 3
   CurrentHealth: 0
   Damage: 2
+  IsTracked: 0
 --- !u!114 &4904668649897268352
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1427,12 +1428,12 @@ PrefabInstance:
     - target: {fileID: 530052327171387750, guid: 7eb3d34e0a0e70b4fbe53c47b084d553,
         type: 3}
       propertyPath: m_fontSize
-      value: 400
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 530052327171387750, guid: 7eb3d34e0a0e70b4fbe53c47b084d553,
         type: 3}
       propertyPath: m_fontSizeBase
-      value: 400
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 3531145008544090661, guid: 7eb3d34e0a0e70b4fbe53c47b084d553,
         type: 3}
@@ -1501,13 +1502,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6721005658331803654, guid: 7eb3d34e0a0e70b4fbe53c47b084d553,
         type: 3}
+      propertyPath: m_text
+      value: '2
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6721005658331803654, guid: 7eb3d34e0a0e70b4fbe53c47b084d553,
+        type: 3}
       propertyPath: m_fontSize
-      value: 400
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 6721005658331803654, guid: 7eb3d34e0a0e70b4fbe53c47b084d553,
         type: 3}
       propertyPath: m_fontSizeBase
-      value: 400
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 8527338760103660360, guid: 7eb3d34e0a0e70b4fbe53c47b084d553,
         type: 3}

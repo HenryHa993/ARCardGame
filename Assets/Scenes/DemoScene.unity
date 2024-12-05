@@ -140,7 +140,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &19718270
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -369,6 +369,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: UI_Navigator
+      objectReference: {fileID: 0}
+    - target: {fileID: 7262696491051694254, guid: 52e1a72ebda7204488883041a3661ca0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8673073521404420923, guid: 52e1a72ebda7204488883041a3661ca0,
         type: 3}
@@ -639,7 +644,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 33.3
+  m_fontSize: 18
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1170,7 +1175,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_SerializedLibrary: {fileID: 11400000, guid: 94da5c9bee622864799facfbadc5dc52,
     type: 2}
-  m_MaxNumberOfMovingImages: 10
+  m_MaxNumberOfMovingImages: 5
   m_TrackedImagePrefab: {fileID: 0}
 --- !u!114 &2512387470422636671
 MonoBehaviour:
@@ -1188,8 +1193,11 @@ MonoBehaviour:
   - Name: Rock
     Prefab: {fileID: 8862235576487634419, guid: 5b8608394e0445c4395f9a294db1bcba,
       type: 3}
-  - Name: JohnLemon
-    Prefab: {fileID: 5009162044786660859, guid: 2b162393015851a4a80fef6e12f2b098,
+  - Name: Paper
+    Prefab: {fileID: 8862235576487634419, guid: 0f83755f7f243614c920e5b9efcfd9ff,
+      type: 3}
+  - Name: Scissors
+    Prefab: {fileID: 8862235576487634419, guid: bc36dc99edb909c409108838e2d76837,
       type: 3}
   - Name: Board
     Prefab: {fileID: 6919020493630500099, guid: 4d812c3efe13fcf4bb987e9f4b801d3a,

@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -14,23 +15,13 @@ public class Unit : MonoBehaviour
     public int CurrentHealth;
     public int Damage;
 
-    //public bool IsFocused;
+    public GameObject FocusIndicator;
+    public bool IsTracked;
     
     private void Start()
     {
         CurrentHealth = MaxHealth;
     }
-
-    // Attempt at touch functionality
-    /*private void OnMouseDown()
-    {
-        Debug.Log("hi");
-    }
-
-    private void OnMouseExit()
-    {
-        Debug.Log("bye");
-    }*/
 
     public void ApplyDamage(int damage)
     {
@@ -62,5 +53,24 @@ public class Unit : MonoBehaviour
         Destroy(gameObject);
         
         OnDeathEvent.Invoke();
+    }
+
+    public void SetIsTracked(bool tracked)
+    {
+        if (IsTracked == tracked)
+        {
+            return;
+        }
+
+        IsTracked = tracked;
+
+        if (IsTracked)
+        {
+            FocusIndicator.SetActive(true);
+        }
+        else
+        {
+            FocusIndicator.SetActive(false);
+        }
     }
 }
