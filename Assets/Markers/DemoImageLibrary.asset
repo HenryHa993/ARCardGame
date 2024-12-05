@@ -35,7 +35,7 @@ MonoBehaviour:
       m_GuidHigh: 5532336006386488536
     m_Size: {x: 0, y: 0}
     m_SpecifySize: 0
-    m_Name: Rock
+    m_Name: Sissors
     m_Texture: {fileID: 2800000, guid: 9ad7417772b59cb4d814c54649cec64c, type: 3}
   - m_SerializedGuid:
       m_GuidLow: 4820059154841309267
@@ -45,7 +45,7 @@ MonoBehaviour:
       m_GuidHigh: 79125594722758056
     m_Size: {x: 0, y: 0}
     m_SpecifySize: 0
-    m_Name: JohnLemon
+    m_Name: Paper
     m_Texture: {fileID: 2800000, guid: 724aab867ac1e884a86d17264f1c1901, type: 3}
   - m_SerializedGuid:
       m_GuidLow: 5489865566536530898

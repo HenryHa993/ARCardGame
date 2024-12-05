@@ -1195,11 +1195,8 @@ MonoBehaviour:
   - Name: Board
     Prefab: {fileID: 6919020493630500099, guid: 4d812c3efe13fcf4bb987e9f4b801d3a,
       type: 3}
-  - Name: Sissors
-    Prefab: {fileID: 8862235576487634419, guid: d59fe842b20c4984bbb4e9537a6c60ca,
-      type: 3}
-  - Name: Paper
-    Prefab: {fileID: 8862235576487634419, guid: e9ecfb62809aee24e884ebc3ac3f9c1c,
+  - Name: gf
+    Prefab: {fileID: 6919020493630500099, guid: 4d812c3efe13fcf4bb987e9f4b801d3a,
       type: 3}
 --- !u!114 &2512387470422636672
 MonoBehaviour:
@@ -1214,10 +1211,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabsList:
-  - {fileID: 8862235576487634419, guid: e9ecfb62809aee24e884ebc3ac3f9c1c, type: 3}
   - {fileID: 8862235576487634419, guid: 5b8608394e0445c4395f9a294db1bcba, type: 3}
   - {fileID: 8862235576487634419, guid: d59fe842b20c4984bbb4e9537a6c60ca, type: 3}
-  - {fileID: 5009162044786660859, guid: 2b162393015851a4a80fef6e12f2b098, type: 3}
+  - {fileID: 8862235576487634419, guid: e9ecfb62809aee24e884ebc3ac3f9c1c, type: 3}
 --- !u!4 &2512387470860572925
 Transform:
   m_ObjectHideFlags: 0
