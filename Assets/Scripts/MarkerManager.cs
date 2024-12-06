@@ -27,6 +27,8 @@ public class MarkerManager : MonoBehaviour
     
     // Dictionary for spawned prefabs
     private Dictionary<string, GameObject> _trackedObjects = new Dictionary<string, GameObject>();
+
+    private List<ARTrackedImage> _trackedImages = new List<ARTrackedImage>();
     
     private ARTrackedImageManager _trackedImageManager;
     
@@ -56,18 +58,31 @@ public class MarkerManager : MonoBehaviour
     {
         //Create object based on image tracked
         UpdateMarkersAdded(eventArgs.added);
-        
-        // This is shit, and does not work.
-        /*foreach (var trackedImage in eventArgs.updated)
+
+        // If ARImage is actively tracked, indicate this on unit.
+        foreach (ARTrackedImage trackedImage in _trackedImages)
         {
-            foreach (var gameObject in ARObjects)
+            Unit trackedUnit = _trackedObjects[trackedImage.trackableId.ToString()].GetComponent<Unit>();
+
+            if (trackedUnit == null)
             {
-                if(gameObject.name == trackedImage.name)
-                {
-                    gameObject.SetActive(trackedImage.trackingState == TrackingState.Tracking);
-                }
+                continue;
             }
-        }*/
+
+            bool isTracked = false;
+
+            switch (trackedImage.trackingState)
+            {
+                default:
+                    isTracked = false;
+                    break;
+                case TrackingState.Tracking:
+                    isTracked = true;
+                    break;
+            }
+            
+            trackedUnit.SetIsTracked(isTracked);
+        }
     }
 
     /*Added images will look through a dictionary to look up the associated
@@ -87,6 +102,7 @@ public class MarkerManager : MonoBehaviour
             GameObject prefab = _namedPrefabs[addedImage.referenceImage.name];
             GameObject spawnedGameObject = Instantiate(prefab, addedImage.transform);
             _trackedObjects.Add(addedImage.trackableId.ToString(), spawnedGameObject);
+            _trackedImages.Add(addedImage);
         }
     }
 

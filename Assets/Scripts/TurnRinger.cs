@@ -4,11 +4,12 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
+/*Finishes the turn.*/
 public class TurnRinger : MonoBehaviour
 {
     public Board OwningBoard;
 
-    /*private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         Unit instigaterUnit = other.gameObject.GetComponent<Unit>();
         
@@ -24,11 +25,5 @@ public class TurnRinger : MonoBehaviour
         }
         
         OwningBoard.OnEndTurn();
-    }*/
-
-    /*private void OnMouseDown()
-    {
-        Debug.Log("Try.");
-        OwningBoard.OnEndTurn();
-    }*/
+    }
 }

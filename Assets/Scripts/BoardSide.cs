@@ -22,6 +22,7 @@ public class BoardSide : MonoBehaviour
         BoardUnit = null;
     }
 
+    // Do I really need to do this in the board level?
     public void Attack(BoardSide defendSide)
     {
         if (BoardUnit == null)
