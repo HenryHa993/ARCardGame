@@ -15,14 +15,17 @@ public class Board : MonoBehaviour
     public BoardSide DefendSide;
     private Quaternion DefaultRotation;
 
+    public Unit Attacker;
+    
     //public BoardState CurrentState;
 
-    private void Start()
+    private IEnumerator Start()
     {
-        //CurrentState = BoardState.BlueTurn;
-        ActionSide.Arrow.enabled = true;
-        DefendSide.Arrow.enabled = false;
-
+        DefaultRotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0);
+        yield return new WaitForEndOfFrame();
+        
+        ActionSide.SetupActionSide();
+        DefendSide.SetupDefendSide();
     }
 
     /*
@@ -34,26 +37,35 @@ public class Board : MonoBehaviour
 
     private void FixedUpdate()
     {
-        transform.rotation = Quaternion.Euler(0,transform.rotation.eulerAngles.y,0);
+        transform.rotation = DefaultRotation;
     }
 
     public void OnEndTurn()
     {
-        if (ActionSide.BoardUnit == null || DefendSide.BoardUnit == null)
+        if (DefendSide.BoardUnit == null)
         {
             return;
         }
         
         Debug.Log(ActionSide.name + " attacks " + DefendSide.name);
         TurnAction();
-        
-        (ActionSide, DefendSide) = (DefendSide, ActionSide);
-        ActionSide.Arrow.enabled = true;
-        DefendSide.Arrow.enabled = false;
+        SwapSides();
     }
 
     private void TurnAction()
     {
-        ActionSide.Attack(DefendSide);
+        //Unit actionUnit = ActionSide.BoardUnit;
+        Unit defendUnit = DefendSide.BoardUnit;
+
+        Attacker.Attack(defendUnit);
+        
+        //ActionSide.Attack(DefendSide);
+    }
+
+    private void SwapSides()
+    {
+        (ActionSide, DefendSide) = (DefendSide, ActionSide);
+        ActionSide.SetupActionSide();
+        DefendSide.SetupDefendSide();
     }
 }

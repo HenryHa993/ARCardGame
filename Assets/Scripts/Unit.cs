@@ -4,9 +4,32 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class Unit : MonoBehaviour
 {
+    public enum Element
+    {
+        Rock,
+        Paper,
+        Scissors
+    }
+
+    public Element ElementType;
+
+    private Dictionary<Element, Element> ElementAdvantages = new Dictionary<Element, Element>
+    {
+        {
+            Element.Rock, Element.Scissors
+        },
+        {
+            Element.Paper, Element.Rock
+        },
+        {
+            Element.Scissors, Element.Paper
+        },
+    };
+    
     public UnityEvent<int> OnDamagedEvent;
     public UnityEvent<int> OnHealedEvent;
     public UnityEvent OnDeathEvent;
@@ -18,10 +41,20 @@ public class Unit : MonoBehaviour
     public GameObject FocusIndicator;
     public bool IsTracked;
     
+    public GameObject Icon;
+    public GameObject UnitBody;
+    
     private void Start()
     {
         CurrentHealth = MaxHealth;
+        Icon.SetActive(true);
+        UnitBody.SetActive(false);
     }
+
+    /*private void Awake()
+    {
+        throw new NotImplementedException();
+    }*/
 
     public void ApplyDamage(int damage)
     {
@@ -72,5 +105,29 @@ public class Unit : MonoBehaviour
         {
             FocusIndicator.SetActive(false);
         }
+    }
+
+    public void Attack(Unit unit)
+    {
+        Element defendingType = unit.ElementType;
+
+        if (ElementType == defendingType)
+        {
+            unit.ApplyDamage(Damage);
+        }
+        else if (ElementAdvantages[ElementType] == defendingType)
+        {
+            unit.ApplyDamage(2*Damage);
+        }
+        else
+        {
+            unit.ApplyDamage((int)(0.5 * Damage));
+        }
+    }
+    
+    public void SetUnitActive()
+    {
+        Icon.SetActive(false);
+        UnitBody.SetActive(true);
     }
 }
