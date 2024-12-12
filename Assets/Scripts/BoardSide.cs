@@ -7,10 +7,24 @@ using UnityEngine.Events;
 public class BoardSide : MonoBehaviour
 {
     public Unit BoardUnit;
+    public BoardSide OtherBoard;
     public Canvas Arrow;
     public Fade AttackPosition;
     public Fade AttackArrow;
     public GameObject AttackText;
+
+    private void LateUpdate()
+    {
+        if (BoardUnit == null)
+        {
+            return;
+        }
+        
+        Vector3 lookPos = OtherBoard.transform.position - BoardUnit.transform.position;
+        Quaternion lookRot = Quaternion.LookRotation(lookPos, Vector3.up);
+        float eulerY = lookRot.eulerAngles.y;
+        Quaternion rotation = Quaternion.Euler (0, eulerY, 0);
+        BoardUnit.transform.rotation = rotation;    }
 
     public void SetupActionSide()
     {

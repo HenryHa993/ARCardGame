@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1710767179935664628}
-  - component: {fileID: 327295418628513112}
   m_Layer: 0
   m_Name: RockMesh
   m_TagString: Untagged
@@ -33,18 +32,6 @@ Transform:
   - {fileID: 8093876423210812859}
   m_Father: {fileID: 2418877924660908243}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &327295418628513112
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1848793246884751316}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8778795a6ed924847b37c8478c75842c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2512593257143661965
 GameObject:
   m_ObjectHideFlags: 0
@@ -394,6 +381,21 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4634505441274884128, guid: 46d7b9ff0ae013b42b16226a1c8411d4,
         type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 4634505441274884128, guid: 46d7b9ff0ae013b42b16226a1c8411d4,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 4634505441274884128, guid: 46d7b9ff0ae013b42b16226a1c8411d4,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 4634505441274884128, guid: 46d7b9ff0ae013b42b16226a1c8411d4,
+        type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -689,7 +691,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0457736a7ac824f43a07753a945ad61e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  flashMaterial: {fileID: 0}
+  flashMaterial: {fileID: 2100000, guid: f704624c982fcd3458441ef2d5ed2336, type: 2}
 --- !u!4 &8093876423210812859 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: d748a8b45aeea8e46b56f03a8ccaf984,

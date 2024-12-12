@@ -68,7 +68,7 @@ public class Unit : MonoBehaviour
         
         if (CurrentHealth <= 0)
         {
-            ApplyDeath();
+            StartCoroutine(ApplyDeath());
             return;
         }
         
@@ -85,13 +85,19 @@ public class Unit : MonoBehaviour
         OnHealedEvent.Invoke(heal);
     }
 
-    public void ApplyDeath()
+    public IEnumerator ApplyDeath()
     {
         Debug.Log(name + " has now died");
         UnitAnimator.SetTrigger("PlayDeath");
-        //UnitAnimator.GetCurrentAnimatorClipInfo();
+        yield return null;
+        
+        while ((UnitAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime) % 1 < 0.99f) // Can change this so it looks like it happens on impact instead of on finish
+        {
+            Debug.Log("Animation ongoing");
+            yield return null;
+        }
         OnDeathEvent.Invoke();
-        //Destroy(gameObject);
+        Destroy(gameObject);
     }
 
     public void SetIsTracked(bool tracked)
@@ -113,13 +119,20 @@ public class Unit : MonoBehaviour
         }
     }
 
-    public void Attack(Unit unit)
+    public IEnumerator Attack(Unit unit)
     {
         Element defendingType = unit.ElementType;
 
         // Damage potentially needs to be delayed to look nicer
         UnitAnimator.SetTrigger("PlayAttack");
-
+        yield return null;
+        
+        while ((UnitAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime) % 1 < 0.99f)
+        {
+            Debug.Log("Animation ongoing");
+            yield return null;
+        }
+        
         if (ElementType == defendingType)
         {
             unit.ApplyDamage(Damage);

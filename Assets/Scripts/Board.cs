@@ -28,17 +28,15 @@ public class Board : MonoBehaviour
         DefendSide.SetupDefendSide();
     }
 
-    /*
     private void LateUpdate()
-    {
-        transform.rotation = Quaternion.Euler(0,transform.rotation.eulerAngles.y,0);
-    }
-    */
-
-    private void FixedUpdate()
     {
         transform.rotation = DefaultRotation;
     }
+
+    /*private void FixedUpdate()
+    {
+        transform.rotation = DefaultRotation;
+    }*/
 
     public void OnEndTurn()
     {
@@ -57,8 +55,8 @@ public class Board : MonoBehaviour
         //Unit actionUnit = ActionSide.BoardUnit;
         Unit defendUnit = DefendSide.BoardUnit;
 
-        Attacker.Attack(defendUnit);
-        
+        //Attacker.Attack(defendUnit);
+        StartCoroutine(Attacker.Attack(defendUnit));
         //ActionSide.Attack(DefendSide);
     }
 

@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1710767179935664628}
-  - component: {fileID: 8440891951894743756}
   m_Layer: 0
   m_Name: RockMesh
   m_TagString: Untagged
@@ -33,18 +32,6 @@ Transform:
   - {fileID: 4442517530330358682}
   m_Father: {fileID: 4273642019713161064}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8440891951894743756
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1848793246884751316}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8778795a6ed924847b37c8478c75842c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1850094887602956229
 GameObject:
   m_ObjectHideFlags: 0
@@ -192,6 +179,7 @@ MonoBehaviour:
   IsTracked: 0
   Icon: {fileID: 3617354782253400099}
   UnitBody: {fileID: 1850094887602956229}
+  UnitAnimator: {fileID: 0}
 --- !u!1001 &1732879549344230818
 PrefabInstance:
   m_ObjectHideFlags: 0
