@@ -31,8 +31,8 @@ public class BoardSide : MonoBehaviour
         Arrow.enabled = true;
         //AttackPosition.SetActive(true);
         
-        StartCoroutine(AttackPosition.FadeIn());
-        StartCoroutine(AttackArrow.FadeIn());
+        StartCoroutine(AttackPosition.FadeIn(0.5f));
+        StartCoroutine(AttackArrow.FadeIn(0.5f));
         AttackText.SetActive(true);
 
         //AttackPosition.SetActive(true);
@@ -42,8 +42,8 @@ public class BoardSide : MonoBehaviour
     {
         Arrow.enabled = false;
         //AttackPosition.SetActive(false);
-        StartCoroutine(AttackPosition.FadeOut());
-        StartCoroutine(AttackArrow.FadeOut());
+        StartCoroutine(AttackPosition.FadeOut(0.5f));
+        StartCoroutine(AttackArrow.FadeOut(0.5f));
         AttackText.SetActive(false);
 
         //AttackPosition.SetActive(false);

@@ -30,13 +30,8 @@ public class Board : MonoBehaviour
 
     private void LateUpdate()
     {
-        transform.rotation = DefaultRotation;
+        transform.rotation = Quaternion.Euler(0, transform.parent.transform.transform.rotation.eulerAngles.y, 0);
     }
-
-    /*private void FixedUpdate()
-    {
-        transform.rotation = DefaultRotation;
-    }*/
 
     public void OnEndTurn()
     {

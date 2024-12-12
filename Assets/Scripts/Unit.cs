@@ -60,6 +60,12 @@ public class Unit : MonoBehaviour
 
     public void ApplyDamage(int damage)
     {
+        // Apply at least one damage
+        if (damage == 0)
+        {
+            damage = 1;
+        }
+        
         CurrentHealth -= damage;
         Debug.Log(name + " took " + damage + " damage");
         Debug.Log(name + " now has " + CurrentHealth + " health");
@@ -91,7 +97,7 @@ public class Unit : MonoBehaviour
         UnitAnimator.SetTrigger("PlayDeath");
         yield return null;
         
-        while ((UnitAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime) % 1 < 0.99f) // Can change this so it looks like it happens on impact instead of on finish
+        while ((UnitAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime) % 1 < 0.95f) // Can change this so it looks like it happens on impact instead of on finish
         {
             Debug.Log("Animation ongoing");
             yield return null;
@@ -127,7 +133,7 @@ public class Unit : MonoBehaviour
         UnitAnimator.SetTrigger("PlayAttack");
         yield return null;
         
-        while ((UnitAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime) % 1 < 0.65f)
+        while ((UnitAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime) % 1 < 0.95f)
         {
             Debug.Log("Animation ongoing");
             yield return null;

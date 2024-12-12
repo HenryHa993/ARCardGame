@@ -13,9 +13,9 @@ public class Fade : MonoBehaviour
         _color = GetComponent<Renderer>().material.color;
     }
 
-    public IEnumerator FadeOut()
+    public IEnumerator FadeOut(float fromAlpha)
     {
-        for (float alpha = 1f; alpha >= 0; alpha -= (Time.deltaTime * 0.5f))
+        for (float alpha = fromAlpha; alpha >= 0; alpha -= (Time.deltaTime * 0.5f))
         {
             _color.a = alpha;
             GetComponent<Renderer>().material.SetColor("_BaseColor", _color);
@@ -27,9 +27,9 @@ public class Fade : MonoBehaviour
         //enabled = false;
     }
     
-    public IEnumerator FadeIn()
+    public IEnumerator FadeIn(float toAlpha)
     {
-        for (float alpha = 0f; alpha <= 1; alpha += (Time.deltaTime * 0.5f))
+        for (float alpha = 0f; alpha <= toAlpha; alpha += (Time.deltaTime * 0.5f))
         {
             _color.a = alpha;
             GetComponent<Renderer>().material.SetColor("_BaseColor", _color);

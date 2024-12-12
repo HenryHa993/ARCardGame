@@ -560,6 +560,79 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 1
+--- !u!1001 &595104325
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1082735697295706187, guid: 8a12017bfbc1d3a4889603e9fa2b4ab8,
+        type: 3}
+      propertyPath: ARBattleSession
+      value: 
+      objectReference: {fileID: 1167446572}
+    - target: {fileID: 3640927478949494554, guid: 8a12017bfbc1d3a4889603e9fa2b4ab8,
+        type: 3}
+      propertyPath: m_Name
+      value: UIRestart
+      objectReference: {fileID: 0}
+    - target: {fileID: 8921474309107768142, guid: 8a12017bfbc1d3a4889603e9fa2b4ab8,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8921474309107768142, guid: 8a12017bfbc1d3a4889603e9fa2b4ab8,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8921474309107768142, guid: 8a12017bfbc1d3a4889603e9fa2b4ab8,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8921474309107768142, guid: 8a12017bfbc1d3a4889603e9fa2b4ab8,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8921474309107768142, guid: 8a12017bfbc1d3a4889603e9fa2b4ab8,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8921474309107768142, guid: 8a12017bfbc1d3a4889603e9fa2b4ab8,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8921474309107768142, guid: 8a12017bfbc1d3a4889603e9fa2b4ab8,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8921474309107768142, guid: 8a12017bfbc1d3a4889603e9fa2b4ab8,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8921474309107768142, guid: 8a12017bfbc1d3a4889603e9fa2b4ab8,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8921474309107768142, guid: 8a12017bfbc1d3a4889603e9fa2b4ab8,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8a12017bfbc1d3a4889603e9fa2b4ab8, type: 3}
 --- !u!1 &672471666
 GameObject:
   m_ObjectHideFlags: 0
@@ -1154,6 +1227,7 @@ GameObject:
   - component: {fileID: 2512387470422636642}
   - component: {fileID: 2512387470422636670}
   - component: {fileID: 2512387470422636671}
+  - component: {fileID: 2512387470422636672}
   m_Layer: 0
   m_Name: XR Origin (AR Rig)
   m_TagString: Untagged
@@ -1190,18 +1264,43 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NamedPrefabs:
-  - Name: Rock
+  - Name: 1
     Prefab: {fileID: 8862235576487634419, guid: 5b8608394e0445c4395f9a294db1bcba,
       type: 3}
-  - Name: Paper
+  - Name: 2
     Prefab: {fileID: 8862235576487634419, guid: 0f83755f7f243614c920e5b9efcfd9ff,
       type: 3}
-  - Name: Scissors
+  - Name: 3
     Prefab: {fileID: 8862235576487634419, guid: bc36dc99edb909c409108838e2d76837,
+      type: 3}
+  - Name: 4
+    Prefab: {fileID: 6919020493630500099, guid: 4d812c3efe13fcf4bb987e9f4b801d3a,
+      type: 3}
+  - Name: 5
+    Prefab: {fileID: 6919020493630500099, guid: 4d812c3efe13fcf4bb987e9f4b801d3a,
+      type: 3}
+  - Name: 6
+    Prefab: {fileID: 6919020493630500099, guid: 4d812c3efe13fcf4bb987e9f4b801d3a,
       type: 3}
   - Name: Board
     Prefab: {fileID: 6919020493630500099, guid: 4d812c3efe13fcf4bb987e9f4b801d3a,
       type: 3}
+--- !u!114 &2512387470422636672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2512387470422636669}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e01aa4f21d1bbfb45a7fbbd9bc830ac8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabsList:
+  - {fileID: 8862235576487634419, guid: 0f83755f7f243614c920e5b9efcfd9ff, type: 3}
+  - {fileID: 8862235576487634419, guid: 5b8608394e0445c4395f9a294db1bcba, type: 3}
+  - {fileID: 8862235576487634419, guid: bc36dc99edb909c409108838e2d76837, type: 3}
 --- !u!4 &2512387470860572925
 Transform:
   m_ObjectHideFlags: 0
@@ -1323,3 +1422,4 @@ SceneRoots:
   - {fileID: 2080238506}
   - {fileID: 19718273}
   - {fileID: 368090676}
+  - {fileID: 595104325}
