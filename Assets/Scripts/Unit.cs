@@ -127,7 +127,7 @@ public class Unit : MonoBehaviour
         UnitAnimator.SetTrigger("PlayAttack");
         yield return null;
         
-        while ((UnitAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime) % 1 < 0.99f)
+        while ((UnitAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime) % 1 < 0.65f)
         {
             Debug.Log("Animation ongoing");
             yield return null;

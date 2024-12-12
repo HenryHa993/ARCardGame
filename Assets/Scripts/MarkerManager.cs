@@ -23,7 +23,7 @@ public class MarkerManager : MonoBehaviour
     public NamedPrefab[] NamedPrefabs;
     
     // Dictionary for prefabs to spawn
-    private Dictionary<string, GameObject> _namedPrefabs = new Dictionary<string, GameObject>();
+    public Dictionary<string, GameObject> _namedPrefabs = new Dictionary<string, GameObject>();
     
     // Dictionary for spawned prefabs
     private Dictionary<string, GameObject> _trackedObjects = new Dictionary<string, GameObject>();

@@ -1154,6 +1154,7 @@ GameObject:
   - component: {fileID: 2512387470422636642}
   - component: {fileID: 2512387470422636670}
   - component: {fileID: 2512387470422636671}
+  - component: {fileID: 2512387470422636672}
   m_Layer: 0
   m_Name: XR Origin (AR Rig)
   m_TagString: Untagged
@@ -1190,18 +1191,43 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NamedPrefabs:
-  - Name: Rock
-    Prefab: {fileID: 8862235576487634419, guid: 5b8608394e0445c4395f9a294db1bcba,
-      type: 3}
-  - Name: Paper
-    Prefab: {fileID: 8862235576487634419, guid: 0f83755f7f243614c920e5b9efcfd9ff,
-      type: 3}
-  - Name: Scissors
-    Prefab: {fileID: 8862235576487634419, guid: bc36dc99edb909c409108838e2d76837,
-      type: 3}
   - Name: Board
     Prefab: {fileID: 6919020493630500099, guid: 4d812c3efe13fcf4bb987e9f4b801d3a,
       type: 3}
+  - Name: 1
+    Prefab: {fileID: 8862235576487634419, guid: 5b8608394e0445c4395f9a294db1bcba,
+      type: 3}
+  - Name: 2
+    Prefab: {fileID: 8862235576487634419, guid: 0f83755f7f243614c920e5b9efcfd9ff,
+      type: 3}
+  - Name: 3
+    Prefab: {fileID: 8862235576487634419, guid: bc36dc99edb909c409108838e2d76837,
+      type: 3}
+  - Name: 4
+    Prefab: {fileID: 8862235576487634419, guid: bc36dc99edb909c409108838e2d76837,
+      type: 3}
+  - Name: 5
+    Prefab: {fileID: 8862235576487634419, guid: bc36dc99edb909c409108838e2d76837,
+      type: 3}
+  - Name: 6
+    Prefab: {fileID: 8862235576487634419, guid: bc36dc99edb909c409108838e2d76837,
+      type: 3}
+--- !u!114 &2512387470422636672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2512387470422636669}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e01aa4f21d1bbfb45a7fbbd9bc830ac8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabsList:
+  - {fileID: 8862235576487634419, guid: 5b8608394e0445c4395f9a294db1bcba, type: 3}
+  - {fileID: 8862235576487634419, guid: 0f83755f7f243614c920e5b9efcfd9ff, type: 3}
+  - {fileID: 8862235576487634419, guid: bc36dc99edb909c409108838e2d76837, type: 3}
 --- !u!4 &2512387470860572925
 Transform:
   m_ObjectHideFlags: 0
