@@ -43,6 +43,8 @@ public class Unit : MonoBehaviour
     
     public GameObject Icon;
     public GameObject UnitBody;
+
+    public Animator UnitAnimator;
     
     private void Start()
     {
@@ -62,12 +64,16 @@ public class Unit : MonoBehaviour
         Debug.Log(name + " took " + damage + " damage");
         Debug.Log(name + " now has " + CurrentHealth + " health");
 
+        OnDamagedEvent.Invoke(damage);
+        
         if (CurrentHealth <= 0)
         {
             ApplyDeath();
+            return;
         }
         
-        OnDamagedEvent.Invoke(damage);
+        UnitAnimator.SetTrigger("PlayHit");
+        
     }
 
     public void ApplyHealing(int heal)
@@ -82,10 +88,10 @@ public class Unit : MonoBehaviour
     public void ApplyDeath()
     {
         Debug.Log(name + " has now died");
-
-        Destroy(gameObject);
-        
+        UnitAnimator.SetTrigger("PlayDeath");
+        //UnitAnimator.GetCurrentAnimatorClipInfo();
         OnDeathEvent.Invoke();
+        //Destroy(gameObject);
     }
 
     public void SetIsTracked(bool tracked)
@@ -111,6 +117,9 @@ public class Unit : MonoBehaviour
     {
         Element defendingType = unit.ElementType;
 
+        // Damage potentially needs to be delayed to look nicer
+        UnitAnimator.SetTrigger("PlayAttack");
+
         if (ElementType == defendingType)
         {
             unit.ApplyDamage(Damage);
@@ -123,6 +132,7 @@ public class Unit : MonoBehaviour
         {
             unit.ApplyDamage((int)(0.5 * Damage));
         }
+        
     }
     
     public void SetUnitActive()

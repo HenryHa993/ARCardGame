@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 848409ee8ba454f42a5ddff137688a27, type: 3}
+  m_Name: FinalImageLibrary
+  m_EditorClassIdentifier: 
+  m_GuidLow: 5151509062076936306
+  m_GuidHigh: 9763684628129575042
+  m_DataStore:
+    m_Storage: []
+  m_Images:
+  - m_SerializedGuid:
+      m_GuidLow: 5058131189039431656
+      m_GuidHigh: 6376220640505895070
+    m_SerializedTextureGuid:
+      m_GuidLow: 7427745847604126387
+      m_GuidHigh: 1685460999034179402
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: Board
+    m_Texture: {fileID: 2800000, guid: 9853a2b3a77e67144a0f3542d9f56317, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 5233086101978789877
+      m_GuidHigh: 10947687768744986791
+    m_SerializedTextureGuid:
+      m_GuidLow: 12129462458142896758
+      m_GuidHigh: 2309855344865390729
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: Rock
+    m_Texture: {fileID: 2800000, guid: 4e0b327681d7a85489303db132410e20, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 5155415525053412256
+      m_GuidHigh: 3279675593900057478
+    m_SerializedTextureGuid:
+      m_GuidLow: 14471280976582592592
+      m_GuidHigh: 11334377728021993627
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: Paper
+    m_Texture: {fileID: 2800000, guid: 4612c8505160c8d49b98d9d47dcc4b9d, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 5690718333974951170
+      m_GuidHigh: 9404569277284907652
+    m_SerializedTextureGuid:
+      m_GuidLow: 5518069011904686818
+      m_GuidHigh: 16595792598831717115
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: Scissors
+    m_Texture: {fileID: 2800000, guid: c4ab6ae21e874c94fbda6bbb701950e6, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 4916590263330700131
+      m_GuidHigh: 5889238781332229045
+    m_SerializedTextureGuid:
+      m_GuidLow: 9481470367324528925
+      m_GuidHigh: 15034031700405275914
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: Rock
+    m_Texture: {fileID: 2800000, guid: 68c5611df31083940a4d9e842d9ca3d0, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 4979054783331613568
+      m_GuidHigh: 12673514348039879071
+    m_SerializedTextureGuid:
+      m_GuidLow: 6815330921255289949
+      m_GuidHigh: 6559848901745362729
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: Paper
+    m_Texture: {fileID: 2800000, guid: 1c28445deb5d5e9429c7c410d243095b, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 5069822838497848317
+      m_GuidHigh: 9654470261964714155
+    m_SerializedTextureGuid:
+      m_GuidLow: 8801179002848218526
+      m_GuidHigh: 17493945841602713672
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: Scissors
+    m_Texture: {fileID: 2800000, guid: 25650d9e11ac7a2448d8a6580efbc6f2, type: 3}

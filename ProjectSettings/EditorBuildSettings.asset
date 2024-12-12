@@ -11,7 +11,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/UI/MainMenu.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/DemoScene.unity
     guid: a656fbfc91a3ee84ebb9561abe551d7d
   - enabled: 0
@@ -35,7 +35,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/UI/AR Play Scene.unity
     guid: d49d37afd333a2649b93d4ca74b89a6a
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/FinalScene.unity
     guid: c962c98878c9c444195c34a5a14e527c
   m_configObjects:
